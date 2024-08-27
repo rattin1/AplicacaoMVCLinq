@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AplicacaoMVCLinq.Models.Clientes>
+@{
+    ViewData["Title"] = "Clientes";
+}
+<h1> Listar clientes </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Data Nascimento</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var clientes in Model)
+        {
+            <tr>
+                <td>@clientes.Id</td>
+                <td>@clientes.Nome</td>
+                <td>@clientes.Email</td>
+                <td>@clientes.Telefone</td>
+                <td>@clientes.DataNasc</td>
+            </tr>
+        }
+    </tbody>
+</table>
